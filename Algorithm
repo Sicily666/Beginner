@@ -1,2 +1,22 @@
 O(1)<O(logn）<O(n)<O(nlogn)<O(n**2)<O(n**2*logn)<O(n**3)
-Linear Search
+***Linear Search:O(n)***
+***Binear Search:O(logn)***
+  left = 0
+  right = len(data)-1
+  mid = (left + right)//2
+  while left <= right:
+    if data[mid] == value:
+      return mid
+    elif data[mid] < value:
+      left = mid + 1
+    else:
+      right = mid - 1
+   return None
+   
+   *Tips:*
+   1.time modle to caculate the time of running the code.
+   2.must sorting the items in the list before use in Binear Search
+
+
+   
+      
