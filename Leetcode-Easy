@@ -1,0 +1,8 @@
+***1***
+for i in range(len(nums)):
+            d=target-nums[i]
+            for j in range(i+1,len(nums)):
+                if nums[j]==d:
+                    return [i,j]
+3224 ms
+
