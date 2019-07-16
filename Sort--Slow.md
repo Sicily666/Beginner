@@ -1,4 +1,4 @@
-***Bubble Sort:O(n**2)***
+***Bubble Sort:O(n**2)
 li = [list]
 for i in range(len(li)-1):
   for j in range(len(li)-i-1):
@@ -7,7 +7,7 @@ for i in range(len(li)-1):
       exchange = True #when no exchange occurs, means that the arrange has been sorted,so the code doesn't need to move the follow code.This process can save time.#
  
  
- ***Select Sort:O(n**2)***
+ ***Select Sort:O(n**2)
 1.not good:2 list;O(n**2)
 li = [list]
 li_sort=[]
@@ -25,7 +25,7 @@ for i in range(len(li)):
       li[i+1],li[min_val]=li[min_val],li[i+1]
   
  
- ***Insert Sort:O(n**2)***
+ ***Insert Sort:O(n**2)
  for i in range(1,len(li)):
     j=i-1
     temp=li[i]
