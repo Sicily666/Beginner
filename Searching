@@ -3,8 +3,8 @@ O(1)<O(logn）<O(n)<O(nlogn)<O(n**2)<O(n**2*logn)<O(n**3)
 ***Binear Search:O(logn)***
   left = 0
   right = len(data)-1
-  mid = (left + right)//2
   while left <= right:
+    mid = (left + right)//2
     if data[mid] == value:
       return mid
     elif data[mid] < value:
