@@ -1,4 +1,4 @@
-**Quick Sort:O()**
+**Quick Sort:O(nlogn)**
 def partition(left,right,li=[list]):
   temp=len[left]
   while left<right:
@@ -18,6 +18,9 @@ def Quick_sort(left,right,li):
     mid=partition(left,right,li)
     Quick_sort(left,mid-1,li)
     Quick_sort(mid+1,right,li)
+
+
+**
     
     
     
