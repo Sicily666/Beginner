@@ -1,2 +1,6 @@
-**189：**
+**189：38ms**
+k=k%len(nums)
+        nums[0:k],nums[k:]= nums[len(nums)-k:],nums[:len(nums)-k]
 
+
+       
