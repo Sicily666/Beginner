@@ -18,6 +18,51 @@ class Solution:
                 c+=1
                 nums[c]=nums[i]
         return c+1
-  
+        
+***217:***
+if not nums:
+            return False
+        d={}
+        for n in nums:
+            if n not in d:
+                d[n]=1
+                nums.remove(n)
+        print(d) 
+        print (nums)
+        if not nums:
+            return False
+        else:
+            return True
+
+nums.sort()
+        for i in range(len(nums)-1):
+            if nums[i]==nums[i+1]:
+                return True
+        return False
+48ms
+
+***121:36ms***
+l=[]
+        for i in range(len(prices)):
+            for j in range(i+1,len(prices)):
+                d=prices[j]-prices[i]
+                if d>0:
+                    l.append(d)
+        print (l)
+        if not l:
+            return 0
+        else:
+            c=l[0]
+            for x in l:
+                if x>c:
+                    c=x
+            return c
+overtime
+
+min_price,max_profit=float("inf"),0
+        for price in prices:
+            min_price=min(min_price,price)
+            max_profit=max(max_profit,price-min_price)
+        return max_profit
   
             
