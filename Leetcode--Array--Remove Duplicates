@@ -82,6 +82,10 @@ min_price,max_profit=float("inf"),0 #float("inf") means the infinit number when 
             local_v=max(0,local_v+i)
             global_v=max(global_v,local_v)
         return global_v
+   
+   
+   **88:**
+   
         
   
             
