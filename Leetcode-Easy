@@ -6,6 +6,8 @@ for i in range(len(nums)):
                     return [i,j]
 *3224 ms*
 
+
+
 ***167***
 for i in range(len(numbers)):
             d=target-numbers[i]
