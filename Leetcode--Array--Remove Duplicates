@@ -1,5 +1,5 @@
 
-**27:28 ms**
+**27**
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         c=0
@@ -9,7 +9,7 @@ class Solution:
                 c+=1
         return c
         
- ***26:52ms***
+ ***26***
  if not nums:
             return 0
         c=0
