@@ -8,6 +8,14 @@ for i in range(len(nums)):
 
 
 
+
+
+***27***
+
+
+
+
+
 ***167***
 for i in range(len(numbers)):
             d=target-numbers[i]
