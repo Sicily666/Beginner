@@ -73,5 +73,17 @@ min_price,max_profit=float("inf"),0 #float("inf") means the infinit number when 
             if prices[i]>prices[i-1]:
                 total+=prices[i]-prices[i-1]
         return total
+ 
+ **53：48ms**
+  if max(nums)<0:
+            return max(nums)
+        local_v,global_v=0,0
+        for i in nums:
+            local_v=max(0,local_v+i)
+            global_v=max(global_v,local_v)
+        return global_v
+        
+  
+            
   
             
