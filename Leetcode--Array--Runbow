@@ -1,1 +1,26 @@
-**118:**
+**118:36**
+r=[]
+        for i in range(numRows):
+            r.append([])
+            for j in range(i+1):
+                if j in (0,i):
+                    r[i].append(1)
+                else:
+                    r[i].append(r[i-1][j-1]+r[i-1][j])
+        return r
+
+
+**119:**
+ r=[]
+        if rowIndex<=33:
+            for i in range(rowIndex+1):
+                r.append([])
+                for j in range(i+1):
+                    if j in (0,i):
+                        r[i].append(1)
+                    else:
+                        r[i].append(r[i-1][j-1]+r[i-1][j])
+            return r[rowIndex]
+ *40ms*
+ 
+ 
