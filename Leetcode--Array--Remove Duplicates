@@ -85,6 +85,16 @@ min_price,max_profit=float("inf"),0 #float("inf") means the infinit number when 
    
    
    **88:**
+   **169:48ms**
+   d={}
+        for i in nums:
+            if i not in d:
+                d[i]=1
+            else:
+                d[i]+=1
+        for x in d:
+            if d[x]>=len(nums)/2:
+                return x
    
         
   
