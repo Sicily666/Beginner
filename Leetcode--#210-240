@@ -1,0 +1,14 @@
+***217***
+
+***219***
+Tips: pay more attention on "at most k"
+  d={}
+        for i in range(len(nums)):
+            if nums[i] not in d:
+                d[nums[i]]=i
+            else:
+                if i-d[nums[i]]<=k:
+                    return True
+                d[nums[i]]=i
+        return False
+            
