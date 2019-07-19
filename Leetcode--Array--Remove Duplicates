@@ -41,6 +41,26 @@ nums.sort()
         return False
 48ms
 
+if not nums:
+            return False
+        if len(nums)==1:
+            return False
+        nums.sort()
+        c=0
+        for i in range(len(nums)):
+            if nums[i]!=nums[c]:
+                c+=1
+                nums[c]=nums[i]
+        print(c)
+        
+        if c+1==len(nums):
+            return False
+        else:
+            return True
+           
+***219***
+
+
 ***121:36ms***
 l=[]
         for i in range(len(prices)):
