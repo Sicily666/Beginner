@@ -1,4 +1,27 @@
 ***217***
+if not nums:
+            return False
+        if len(nums)==1:
+            return False
+        nums.sort()
+        
+        for i in range(len(nums)-1):
+            if nums[i+1]==nums[i]:
+                return True
+        return False
+
+if not nums:
+            return False
+        if len(nums)==1:
+            return False
+        d={}
+        for i in nums:
+            if i not in d:
+                d[i]=1
+            else:
+                return True
+        return False
+        
 
 ***219***
 Tips: pay more attention on "at most k"
