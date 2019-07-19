@@ -1,1 +1,16 @@
-
+ ***121***
+min_price,max_profit=float("inf"),0 #float("inf") means the infinit number when the list is reversed from big to small, and is the firt                                      number in the list
+        for price in prices:
+            min_price=min(min_price,price)
+            max_profit=max(max_profit,price-min_price)
+        return max_profit
+        
+        
+***122***
+if len(prices)<=1:
+            return 0
+        total = 0
+        for i in range(1,len(prices)):
+            if prices[i]>prices[i-1]:
+                total+=prices[i]-prices[i-1]
+        return total
