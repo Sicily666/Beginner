@@ -7,4 +7,4 @@ O(sort)=nlogn
 
 str.split() means remove the space only in the first and last of the str.
 
-if not str.split() means str="  "
+if not str.split() means str="  "(#58）
