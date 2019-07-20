@@ -1,0 +1,10 @@
+***58***
+if not s:
+            return 0
+        if not s.split():
+            return 0
+        else:
+            x=s.split()            
+            print(x)
+            a=x[-1]
+            return len(a)
