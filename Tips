@@ -4,3 +4,7 @@ eg: 3%4=3-3//4*4,3//4=0,so a%b=3
     -3%5=-3-(-3)//5*5,-3//5=-1,so-3%5=2
 
 O(sort)=nlogn
+
+str.split() means remove the space only in the first and last of the str.
+
+if not str.split() means str="  "
