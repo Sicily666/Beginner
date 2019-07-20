@@ -1,0 +1,16 @@
+***387***
+ d={}
+        if not s:
+            return -1
+        for i in range(len(s)):
+            if s[i] not in d:
+                d[s[i]]=1
+            else:
+                d[s[i]]+=1
+        for k in d:
+            if d[k]==1:
+                for i in range(len(s)):
+                    if s[i]==k:
+                        return i
+                        break
+        return -1
