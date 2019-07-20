@@ -7,6 +7,16 @@ for i in range(len(nums)):
 *3224 ms*
 
 
+***14***
+ if not strs:
+            return ""
+        for d in range(len(strs[0])):
+            for s in strs[1:]:
+                if d>=len(s) or strs[0][d]!=s[d]:
+                    return strs[0][:d]
+        return strs[0]
+                
+
 ***26***
 Tips:Two Points
 if not nums:
@@ -29,6 +39,13 @@ c=0
                 c+=1
         return c
                 
+
+***28***
+for i in range(len(haystack)-len(needle)+1):
+            if haystack[i:i+len(needle)]==needle:
+                return i
+        return -1
+
 
 
 
