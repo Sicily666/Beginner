@@ -9,9 +9,25 @@ c=0
             
             
 ***290***
-
+str=str.split()
+        if len(pattern)!=len(str):
+            return False
+        d1={}
+        d2={}
+        for i in range(len(pattern)):
+            if pattern[i] not in d1 and str[i] not in d2:
+                d1[pattern[i]]=str[i]
+                d2[str[i]]=pattern[i]
+            elif pattern[i] in d1: 
+                if d1[pattern[i]]!=str[i]:
+                    return False
+            elif str[i] in d2: 
+                if d2[str[i]]!=pattern[i]:
+                    return False
+        return True
+                    
             
-            
+   
 ***293***
 l=[]
         for i in range(len(s)-1):
