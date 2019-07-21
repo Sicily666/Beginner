@@ -1,3 +1,22 @@
+***38***
+seq="1"
+        for i in range(n-1):
+            seq=self.f(seq)
+        return seq
+    def f(self,seq):
+        j=0
+        seq1=""
+        while j < len(seq):
+            
+            c=1
+            while j < len(seq)-1 and seq[j]==seq[j+1]:
+                c+=1
+                j+=1
+            seq1+=str(c)+seq[j]
+            j+=1
+        return seq1
+                
+                
 ***58***
 if not s:
             return 0
