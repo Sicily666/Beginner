@@ -1,0 +1,13 @@
+***205***
+if len(s)!=len(t):
+            return False
+        return self.f(s,t) and self.f(t,s)
+    def f(self,s,t):
+        d={}
+        for i in range(len(s)):
+            if s[i] not in d:
+                d[s[i]]=t[i]
+            elif d[s[i]]!=t[i]:
+                return False
+        return True
+    
