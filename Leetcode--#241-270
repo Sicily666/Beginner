@@ -1,1 +1,8 @@
-***252***
+***246***
+d={"0":"0","1":"1","6":"9","8":"8","9":"6"}
+        n=len(num)
+        for i in range(int((n+1)/2)):
+            if num[n-i-1] not in d or d[num[n-i-1]]!=num[i]:
+                return False
+        return True
+        
