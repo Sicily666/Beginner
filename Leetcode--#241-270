@@ -5,4 +5,23 @@ d={"0":"0","1":"1","6":"9","8":"8","9":"6"}
             if num[n-i-1] not in d or d[num[n-i-1]]!=num[i]:
                 return False
         return True
+
+
+***266***
+ d={}
+        for i in s:
+            if i not in d:
+                d[i]=1
+            else:
+                d[i]+=1
+        c=0
+        for k in d:
+            if d[k]%2!=0:
+                c+=1
+        if c>1:
+            return False
+        return True
+                
+            
+        
         
