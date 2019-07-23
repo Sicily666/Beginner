@@ -1,3 +1,22 @@
+***383***
+dr={}
+        dm={}
+        for i in magazine:
+            if i not in dm:
+                dm[i]=1
+            else:
+                dm[i]+=1
+        for i in ransomNote:
+            if i not in dr:
+                dr[i]=1
+            else:
+                dr[i]+=1
+        for c in ransomNote:
+            if c not in dm or c in dm and dr[c]>dm[c]:
+                return False
+        return True
+        
+        
 ***387***
  d={}
         if not s:
