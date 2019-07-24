@@ -1,3 +1,22 @@
+***367***
+if num==0:
+            return False
+        
+        if num==1:
+            return True
+        l,r=0,num
+       
+        while l<=r:
+            m=l+(r-l)//2
+            if m>num/m:
+                r=m-1
+            elif m==num/m:
+                return True
+            elif m<num/m:
+                l=m+1
+        return m==num/m and num%m==0
+        
+
 ***383***
 dr={}
         dm={}
