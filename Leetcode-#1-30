@@ -7,6 +7,23 @@ for i in range(len(nums)):
 *3224 ms*
 
 
+***7***
+if x ==0:
+            return 0
+        a=abs(x)
+        nums=0
+        while a!=0:
+            temp=a%10
+            nums= nums*10+temp
+            a=int(a/10)
+        if x>0 and nums<2147483647:
+            return nums
+        elif x<0 and nums<=2147483647:
+            return -nums
+        else:
+            return 0
+            
+            
 ***9***
 s=str(x)
         print(len(s))
