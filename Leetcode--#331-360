@@ -1,3 +1,15 @@
+***342***
+if num<=0:
+            return False
+        if num==1:
+            return True
+        while num%4==0:
+            num=num//4
+            if num==1:
+                return True
+        return False
+
+
 ***344***
  i,j=0,len(s)-1
         m=(len(s)-1)//2
