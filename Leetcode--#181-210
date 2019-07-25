@@ -1,5 +1,17 @@
 ***195***
-
+***204***
+if n <=1:
+            return 0
+        num=[None]*n
+        num[0],num[1]=False,False
+        for i in range(n):
+            if num[i]==None:
+                num[i]= True
+                for j in range(i+i,n,i):
+                    num[j]=False
+        return sum(num)
+        
+        
 ***205***
 if len(s)!=len(t):
             return False
