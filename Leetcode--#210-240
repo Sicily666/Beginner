@@ -35,3 +35,27 @@ Tips: pay more attention on "at most k"
                 d[nums[i]]=i
         return False
             
+
+***231***
+if n<=0:
+            return False
+        if n==1:
+            return True
+        while n >1:
+            if n%2==0:
+                n=n//2
+            else:
+                return False
+        return True
+        
+if n<=0:
+            return False
+        if n==1:
+            return True
+
+        while n%2==0:
+            n=n//2            
+            if n==1:
+                return True
+        return False
+            
