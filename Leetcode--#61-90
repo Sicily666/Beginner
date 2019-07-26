@@ -42,4 +42,16 @@ if x==0:
         return l-1
         
         
+***83***
+current=head
+        while current:
+            runner=current.next
+            while runner and runner.val==current.val:
+                runner=runner.next
+            current.next=runner
+            current=runner
+        return head
+            
+        
+        
             
