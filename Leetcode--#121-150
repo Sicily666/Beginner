@@ -29,5 +29,14 @@ i,j=0,(len(s)-1)
                 i+=1
                 j-=1
         return True
+        
+        
+ ***141***
+ fast,slow=head,head
+        while fast and fast.next:
+            fast,slow=fast.next.next,slow.next
+            if fast==slow:
+                return True
+        return False
     
     
