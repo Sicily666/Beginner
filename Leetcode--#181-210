@@ -1,4 +1,22 @@
 ***195***
+***202***
+v=set()
+        if n<1:
+            return False
+        if n ==1:
+            return True
+        while n>1:
+            r=0
+            while n!=0:                
+                r+=(n%10)**2
+                n=n//10
+            if r in v:
+                return False
+            v.add(r)
+            n=r
+        return True
+                
+                
 ***204***
 if n <=1:
             return 0
@@ -24,4 +42,11 @@ if len(s)!=len(t):
             elif d[s[i]]!=t[i]:
                 return False
         return True
+ 
+ 
+ ***206***
+ d=ListNode(-float("inf"))
+        while head:            
+            d.next,head.next,head=head,d.next,head.next
+        return d.next
     
