@@ -58,4 +58,13 @@ if n<=0:
             if n==1:
                 return True
         return False
+        
+        
+ ***237***
+ cur = node
+        while node.next!=None:
+            node.val = node.next.val
+            cur = node
+            node = node.next
+        cur.next = None
             
