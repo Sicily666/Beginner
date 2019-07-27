@@ -36,4 +36,11 @@ v="aeiouAEIOU"
                 i+=1
         
         return "".join(l)
-            
+
+
+***349***
+l=[]        
+        for i in nums1:
+            if i in nums2 and i not in l:
+                l.append(i)
+        return l
