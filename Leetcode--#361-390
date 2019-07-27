@@ -66,3 +66,12 @@ dr={}
                         return i
                         break
         return -1
+
+
+***389***
+ s = sorted(list(s))
+        t = sorted(list(t))
+        for i in range(len(s)):
+            if s[i]!=t[i]:
+                return t[i]
+        return t[-1]
