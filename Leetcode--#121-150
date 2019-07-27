@@ -29,8 +29,15 @@ i,j=0,(len(s)-1)
                 i+=1
                 j-=1
         return True
-        
-        
+
+
+***136***
+ans=0
+        for i in nums:
+            ans^=i
+        return ans
+   
+   
  ***141***
  fast,slow=head,head
         while fast and fast.next:
