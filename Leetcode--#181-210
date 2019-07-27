@@ -15,6 +15,20 @@ v=set()
             v.add(r)
             n=r
         return True
+        
+        
+***203***
+d=ListNode(-float("inf"))
+        d.next=head
+        privious=d
+        current=d.next
+        while current:
+            if current.val==val:
+                privious.next=current.next
+            else:
+                privious=current
+            current=current.next
+        return d.next
                 
                 
 ***204***
