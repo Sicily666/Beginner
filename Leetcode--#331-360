@@ -44,3 +44,12 @@ l=[]
             if i in nums2 and i not in l:
                 l.append(i)
         return l
+        
+        
+***350***
+l=[]        
+        for i in nums1:
+            if i in nums2:
+                l.append(i)
+                nums2.remove(i)
+        return l
