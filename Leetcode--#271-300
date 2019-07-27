@@ -1,3 +1,15 @@
+***278***
+l,r=0,n
+        while l<=r:
+            m=(l+r)//2
+            if isBadVersion(m-1)==False and isBadVersion(m)==True:
+                return m
+            elif isBadVersion(m)==False:
+                l=m+1
+            else:
+                r=m-1
+                
+                
 ***283***
 c=0
         for j in range(len(nums)):
