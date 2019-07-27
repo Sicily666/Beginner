@@ -16,6 +16,20 @@ if num==0:
                 l=m+1
         return m==num/m and num%m==0
         
+       
+***374***
+l,r=1,n
+    
+        while l<=r:
+            m=l+(r-l)/2
+            ret=guess(m)
+            if ret==0:
+                return m
+            elif ret==-1:
+                r=m-1
+            elif ret==1:
+                l=m+1
+        
 
 ***383***
 dr={}
