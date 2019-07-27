@@ -12,7 +12,13 @@ l,r=0,len(nums)-1
             return m
         if l>m:
             return l
-                
+
+ if target>nums[len(nums)-1]:
+            return len(nums)
+        for i in range(len(nums)):
+            if nums[i]>=target:
+                return i
+                               
                 
 ***38***
 seq="1"
