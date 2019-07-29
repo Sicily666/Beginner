@@ -1,0 +1,50 @@
+Class Node:
+  def --init--(self,item):
+    self.item=item
+    self.next=None
+    
+头插法:
+def creat_linkedlist(li):
+  head=Node(li[0])
+  for element in li[1:]:
+    node=Node(element)
+    node.next=head
+    head=node
+   return head
+
+尾插法：
+def creat_linkedlist(li):
+  head=Node(li[0])
+  tail=head
+  for element in li[1:]:
+    node=Node(element)
+    tail.next=node
+    node=tail
+  return head
+  
+Insert:
+p.next=curNode.next
+curNode.next=p
+
+Delete:
+curNode.next=p.next
+del p
+
+Double Linkedlist:
+Class Node:
+  def--init--(self,item):
+    self.item=item
+    self.next=None
+    self.prior=None
+  
+ Insert:
+ p.next=curNode.next
+ curNode.next.prior=p
+ p.prior=curNode
+ curNode.next=p
+ 
+ Delete:
+ curNode.next=p.next
+ p.next.prior=curNode
+ del p
+ 
