@@ -1,3 +1,0 @@
-temp=self.left.val
-        self.left.val=self.right.val
-        self.right.val=temp
