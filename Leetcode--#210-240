@@ -72,6 +72,11 @@ Tips: pay more attention on "at most k"
         return len(self.queue)==0
 
 
+***226***
+if root is not None:
+            root.left,root.right=self.invertTree(root.right),self.invertTree(root.left)
+        return root
+        
 
 ***231***
 if n<=0:
