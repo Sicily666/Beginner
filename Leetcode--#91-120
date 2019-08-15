@@ -8,5 +8,21 @@ if root is None:
         if left is None or right is None or left.val!=right.val:
             return False
         return self.isSymmetricRec(left.left,right.right) and self.isSymmetricRec(left.right,right.left)
+
+
+***111***
+if root==None:
+            return 0
+        if root.left and root.right:
+            return min(self.minDepth(root.left),self.minDepth(root.right))+1
+        else:
+            return max(self.minDepth(root.left),self.minDepth(root.right))+1
             
         
+***112***
+if root is None:
+            return False
+        if root.left==None and root.right==None and root.val==sum:
+            return True
+        else:
+            return self.hasPathSum(root.left,sum-root.val) or self.hasPathSum(root.right,sum-root.val)
