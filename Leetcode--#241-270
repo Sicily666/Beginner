@@ -30,6 +30,20 @@ d={"0":"0","1":"1","6":"9","8":"8","9":"6"}
         return True
 
 
+***257***
+ res=[]
+        def f(root,cur):
+            if root==None:
+                return
+            if root.left==None and root.right==None:
+                res.append(cur+str(root.val))
+            else:
+                f(root.left,cur+str(root.val)+"->")
+                f(root.right,cur+str(root.val)+"->")
+        f(root,'')
+        return res
+        
+        
 ***258***
 if num<=0:
             return 0
