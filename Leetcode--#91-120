@@ -16,7 +16,19 @@ if root is None:
         else:
             return max(self.maxDepth(root.left),self.maxDepth(root.right))+1
             
-            
+
+***110***
+ def f(root):
+            if root is None:
+                return 0
+            left_height,right_height=f(root.left),f(root.right)
+            if left_height<0 or right_height<0 or abs(left_height-right_height)>1:
+                return -1
+            else:
+                return max(right_height,left_height)+1
+        return f(root)>=0
+        
+        
 ***111***
 if root==None:
             return 0
