@@ -35,6 +35,20 @@ if root is None:
             result.append(val)
         return result[::-1]
         
+
+
+***108***
+def f(nums,start,end):
+            if start>end:
+                return None
+            mid=(start+end)//2
+            node=TreeNode(nums[mid])
+            node.left=f(nums,start,mid-1)
+            node.right=f(nums,mid+1,end)
+            return node
+        return f(nums,0,len(nums)-1)
+        
+        
         
 ***110***
  def f(root):
