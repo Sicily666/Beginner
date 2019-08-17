@@ -68,5 +68,18 @@ if num<=0:
         return True
                 
             
+ ***270***
+ d=root.val
+        while root:
+            if abs(root.val-target)<abs(d-target):
+                d=root.val
+            else:
+                if root.val>target:
+                    root=root.left
+                else:
+                    root=root.right
+        return d
+        
+        
         
         
