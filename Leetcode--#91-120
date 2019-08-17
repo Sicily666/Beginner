@@ -17,6 +17,25 @@ if root is None:
             return max(self.maxDepth(root.left),self.maxDepth(root.right))+1
             
 
+***107***
+if root is None:
+            return []
+        result=[]
+        current=[root]
+        while current:
+            next_l=[]
+            val=[]
+            for node in current:
+                val.append(node.val)
+                if node.left:
+                    next_l.append(node.left)
+                if node.right:
+                    next_l.append(node.right)
+            current=next_l
+            result.append(val)
+        return result[::-1]
+        
+        
 ***110***
  def f(root):
             if root is None:
