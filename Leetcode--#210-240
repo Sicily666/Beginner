@@ -144,6 +144,17 @@ if n<=0:
         return len(self.stack1)==0
 
 
+***235***
+d=root
+        while d:
+            if d.val>p.val and d.val>q.val:
+                d=d.left
+            elif d.val<p.val and d.val<q.val:
+                d=d.right
+            else:
+                return d
+        
+        
  ***237***
  cur = node
         while node.next!=None:
