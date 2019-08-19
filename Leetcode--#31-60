@@ -1,24 +1,36 @@
 ***35***
 l,r=0,len(nums)-1
         while l<=r:
-            m=(l+r)//2
+            m=l+(r-l)//2
             if nums[m]==target:
                 return m
             elif nums[m]>target:
                 r=m-1
             elif nums[m]<target:
                 l=m+1
-        if r<m:
-            return m
-        if l>m:
-            return l
+        return l
+        
 
  if target>nums[len(nums)-1]:
             return len(nums)
         for i in range(len(nums)):
             if nums[i]>=target:
                 return i
-                               
+
+
+stack=[]
+        if nums[0]>target:
+            return 0
+        if nums[-1]<target:
+            return len(nums)
+        for i in range(len(nums)):
+            if nums[i]<target:
+                stack.append(i)
+            elif nums[i]==target:
+                return i
+            else:
+                return stack.pop()+1
+
                 
 ***38***
 seq="1"
