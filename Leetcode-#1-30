@@ -34,7 +34,23 @@ carry=0
             cur.next=ListNode(1)
         return dummy.next
         
-    
+***5***
+p=''
+        for i in range(len(s)):
+            len1=len(self.pa(s,i,i))
+            if len1>len(p):
+                p=self.pa(s,i,i)
+            len2=len(self.pa(s,i,i+1))
+            if len2>len(p):
+                p=self.pa(s,i,i+1)
+        return p
+    def pa(self,s,l,r):
+        while l>=0 and r<len(s) and s[l]==s[r]:
+            l-=1
+            r+=1
+        return s[l+1:r]
+        
+        
 ***7***
 if x ==0:
             return 0
