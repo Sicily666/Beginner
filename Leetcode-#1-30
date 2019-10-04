@@ -211,6 +211,25 @@ if len(nums)<4:
                         l+=1
         return result
         
+
+***19***
+dummy=ListNode(0)
+        dummy.next=head
+        fast=dummy
+        slow=dummy
+        i=0
+        j=0
+        while fast != None:
+            fast=fast.next
+            i+=1
+        
+        n=i-n
+        while n>1:
+            slow=slow.next
+            n-=1
+        slow.next=slow.next.next
+        return dummy.next
+        
         
 ***20***
 d={")":"(","]":"[","}":"{"}
@@ -242,6 +261,42 @@ cur=dummy=ListNode(0)
                 l2=l2.next
             cur=cur.next
         cur.next=l1 or l2
+        return dummy.next
+        
+
+***22***
+if n==0:
+            return []
+        result=[]
+        self.helpers(n,n,'',result)
+        return result
+    
+    def helpers(self,l,r,item,result):
+        if r<l:
+            return
+        if l==0 and r==0:
+            result.append(item)
+        if l>0:
+            self.helpers(l-1,r,item+"(",result)
+        if r>0:
+            self.helpers(l,r-1,item+")",result)
+     
+     
+***24***
+if head==None or head.next==None:
+            return head
+        
+        dummy=ListNode(0)
+        dummy.next=head
+        curr=dummy
+        
+        while curr.next!=None and curr.next.next!=None:
+            i=curr.next
+            j=curr.next.next
+            curr.next=j
+            i.next=j.next
+            j.next=i
+            curr=curr.next.next
         return dummy.next
         
         
