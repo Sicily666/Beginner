@@ -110,8 +110,20 @@ seq="1"
             seq1+=str(c)+seq[j]
             j+=1
         return seq1
-                
-                
+        
+        
+***46***
+if len(nums)<=1:
+            return [nums]
+        
+        result=[]
+        for i,num in enumerate(nums):
+            n=nums[:i]+nums[i+1:]
+            for j in self.permute(n):
+                result.append([num]+j)
+        return result
+        
+        
 ***58***
 if not s:
             return 0
