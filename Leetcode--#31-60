@@ -192,3 +192,37 @@ if not s:
             a=x[-1]
             return len(a)
             
+
+***59***
+result = [[0 for x in range(n)] for y in range(n)]
+        print(result)
+        
+        rowStart=0
+        rowEnd=n-1
+        colunmStart=0
+        colunmEnd=n-1
+        i=1
+        while rowStart<=rowEnd and colunmStart<=colunmEnd:
+            for c in range(colunmStart,colunmEnd+1):
+                result[rowStart][c]=i
+                i+=1
+            rowStart+=1
+            
+            for r in range(rowStart,rowEnd+1):
+                result[r][colunmEnd]=i
+                i+=1
+            colunmEnd-=1
+            
+            for c in range(colunmEnd,colunmStart-1,-1):
+                result[rowEnd][c]=i
+                i+=1
+            rowEnd-=1
+            
+            for r in range(rowEnd,rowStart-1,-1):
+                result[r][colunmStart]=i
+                i+=1
+            colunmStart+=1
+        return result
+        
+        
+            
