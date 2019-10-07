@@ -124,6 +124,35 @@ if len(nums)<=1:
         return result
         
         
+***54***
+if len(matrix)==0:
+            return []
+        result=[]
+        rowBegin=0
+        rowEnd=len(matrix)-1
+        columnBegin=0
+        columnEnd=len(matrix[0])-1
+        while rowBegin<=rowEnd and columnBegin<=columnEnd:
+            for i in range(columnBegin,columnEnd+1,1):
+                result.append(matrix[rowBegin][i])
+            rowBegin+=1
+        
+            for j in range(rowBegin,rowEnd+1,1):
+                result.append(matrix[j][columnEnd])
+            columnEnd-=1
+            
+            if rowBegin<=rowEnd:
+                for i in range(columnEnd,columnBegin-1,-1):
+                    result.append(matrix[rowEnd][i])
+            rowEnd-=1
+            
+            if columnBegin<=columnEnd:
+                for j in range(rowEnd,rowBegin-1,-1):
+                    result.append(matrix[j][columnBegin])
+            columnBegin+=1
+        return result
+        
+        
 ***58***
 if not s:
             return 0
