@@ -122,6 +122,19 @@ if len(nums)<=1:
             for j in self.permute(n):
                 result.append([num]+j)
         return result
+    
+    
+***49***
+result={}
+        l=[]
+        for item in strs:
+            k="".join(sorted(item))            
+            if k not in result:
+                result[k]=[]
+            result[k].append(item)
+        for x in result:
+            l.append(result[x])
+        return l
         
         
 ***54***
