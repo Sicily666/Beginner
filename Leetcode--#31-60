@@ -109,7 +109,48 @@ stack=[]
             else:
                 return stack.pop()+1
 
-                
+
+***36***
+ n=len(board)
+        return self.row() and self.colunm()and self.cell()
+    
+    def row(self.board):
+        row=[]
+        for r in range(n):
+            for c in board[r]:
+                if c!=".":
+                    row.append(c)
+            if len(set(row))!=len(row):
+                return False
+        return True
+    
+    def colunm(self,board):
+        colunm=[]
+        for c in range(len(board[0])):
+            for r in range(len(board)):
+                if board[r][c]!=".":
+                    colunm.append(board[r][c])
+            if len(set(colunm))!=len(colunm):
+                return False
+        return True
+    
+    def cell(self.board):
+        cell=[]
+        r=0
+        c=0
+        while r<=len(board[0]) and c<=len(board):
+            
+            for row in range(r,r+3):
+                for colunm in range(c,c+3):
+                                   
+                    if board[row][colunm]!=".":
+                        cell.append(board[row][colunm])
+            
+            if len(set(cell))!=9:
+                return False
+            return True
+            
+    
 ***38***
 seq="1"
         for i in range(n-1):
