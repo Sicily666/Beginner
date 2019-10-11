@@ -111,46 +111,41 @@ stack=[]
 
 
 ***36***
- n=len(board)
-        return self.row() and self.colunm()and self.cell()
+ return self.row(board) and self.colunm(board) and self.cell(board)
     
-    def row(self.board):
+    def row(self,board):
         row=[]
-        for r in range(n):
-            for c in board[r]:
-                if c!=".":
-                    row.append(c)
+        for r in range(len(board)):
+            row = [x for x in board[r] if x != '.']
             if len(set(row))!=len(row):
                 return False
         return True
     
     def colunm(self,board):
-        colunm=[]
-        for c in range(len(board[0])):
-            for r in range(len(board)):
-                if board[r][c]!=".":
-                    colunm.append(board[r][c])
+        
+        for c in range(len(board)):
+            colunm=[board[r][c] for r in range(len(board)) if board[r][c]!='.']
             if len(set(colunm))!=len(colunm):
                 return False
         return True
+            
     
-    def cell(self.board):
-        cell=[]
+    def cell(self,board):
+        n=len(board)
         r=0
         c=0
-        while r<=len(board[0]) and c<=len(board):
-            
-            for row in range(r,r+3):
-                for colunm in range(c,c+3):
-                                   
-                    if board[row][colunm]!=".":
-                        cell.append(board[row][colunm])
-            
-            if len(set(cell))!=9:
-                return False
-            return True
-            
-    
+        for r in range(0,n,3):
+            for c in range(0,n,3):
+                cell=[]
+                for i in range(3):
+                    for j in range(3):
+                        if board[r+i][c+j]!='.':
+                            cell.append(board[r+i][c+j])
+                if len(set(cell))!=len(cell):
+                    return False
+        return True
+                        
+              
 ***38***
 seq="1"
         for i in range(n-1):
